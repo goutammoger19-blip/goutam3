@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#17050d">
+<title>Something Special ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Parisienne&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient"></div><div class="grain"></div><div id="particles"></div>
+
+<div class="browser">
+  <div class="browser-bar">
+    <div class="dots"><i></i><i></i><i></i></div>
+    <div class="address">birthday-surprise.local</div>
+    <button id="musicToggle" class="mini">♫</button>
+  </div>
+
+  <main id="app">
+    <section class="page active" id="home">
+      <div class="hero">
+        <div class="hero-copy">
+          <div class="tiny">A LITTLE SOMETHING FOR YOU</div>
+          <h1>Happy Birthday,<br><em id="name1">Rajani</em> <span>♥</span></h1>
+          <p>Not just a birthday wish.<br>A tiny world made especially for you.</p>
+          <button class="pill" data-go="unlock">Start the surprise <b>→</b></button>
+        </div>
+        <div class="hero-orbit">
+          <div class="orbit o1"></div><div class="orbit o2"></div>
+          <div class="photo-placeholder">
+            <div class="photo-shine"></div>
+            <div class="photo-icon">✦</div>
+            <small>Add your favorite photo</small>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-note">scrolling into your surprise <span>↓</span></div>
+    </section>
+
+    <section class="page center" id="unlock">
+      <div class="card lock">
+        <div class="status">13:41</div>
+        <div class="lock-heart">♥</div>
+        <div class="tiny">PRIVATE SURPRISE</div>
+        <h2>Enter the date<br><em>that means everything.</em></h2>
+        <div class="date-fields"><input id="dd" placeholder="DD" inputmode="numeric"><span>/</span><input id="mm" placeholder="MM" inputmode="numeric"></div>
+        <button class="pill" id="unlockBtn">Unlock <b>♥</b></button>
+        <button class="link" id="skipBtn">Skip the lock</button>
+        <div class="oops" id="oops">Oops… that's not the secret date. Try again ♥</div>
+      </div>
+    </section>
+
+    <section class="page center" id="birthday">
+      <div class="celebrate">
+        <div class="tiny">TODAY, WE CELEBRATE YOU</div>
+        <h2>It's your day,<br><em id="name2">Rajani</em>.</h2>
+        <div class="cake3d">
+          <div class="candle flame1"></div><div class="candle flame2"></div><div class="candle flame3"></div>
+          <div class="flame fire1"></div><div class="flame fire2"></div><div class="flame fire3"></div>
+          <div class="icing"></div><div class="layer top"></div><div class="layer middle"></div><div class="layer bottom"></div>
+        </div>
+        <p>Make a wish. Close your eyes for a second.<br>We'll take care of the magic.</p>
+        <button class="pill" id="wishBtn">Make a wish ✨</button>
+      </div>
+    </section>
+
+    <section class="page center" id="memories">
+      <div class="section-box">
+        <div class="tiny">CUTE MEMORIES ♥</div>
+        <h2>A few moments<br><em>worth keeping.</em></h2>
+        <div class="polaroids">
+          <div class="polaroid p1"><div class="fake-photo fuchsia">♥</div><span>That smile.</span></div>
+          <div class="polaroid p2"><div class="fake-photo violet">✦</div><span>That little moment.</span></div>
+          <div class="polaroid p3"><div class="fake-photo rose">∞</div><span>Always remember.</span></div>
+        </div>
+        <p class="hint">Replace these cards with your own photos in <b>assets/photos</b>.</p>
+        <button class="pill" id="memoryBtn">Next surprise →</button>
+      </div>
+    </section>
+
+    <section class="page center" id="wishes">
+      <div class="section-box">
+        <div class="tiny">POP THE WISHES</div>
+        <h2>Five little wishes<br><em>just for you.</em></h2>
+        <p>Tap the balloons one by one.</p>
+        <div class="balloons">
+          <button class="bal ba" data-text="May your happiest days find you unexpectedly.">♥</button>
+          <button class="bal bb" data-text="May every dream you whisper become real.">✦</button>
+          <button class="bal bc" data-text="May you always have a reason to smile.">★</button>
+          <button class="bal bd" data-text="May this year be softer, brighter and kinder.">♡</button>
+          <button class="bal be" data-text="And may you never forget how loved you are.">∞</button>
+        </div>
+        <div id="wishText" class="wish-text"></div>
+        <button class="pill hidden" id="wishesNext">Next surprise →</button>
+      </div>
+    </section>
+
+    <section class="page center" id="puzzle">
+      <div class="section-box puzzle-box">
+        <div class="tiny">BIRTHDAY PUZZLE</div>
+        <h2>One tiny challenge<br><em>before the finale.</em></h2>
+        <div class="puzzle-card">
+          <div class="panda">🐼</div>
+          <div class="puzzle-copy"><b>Find the hidden birthday number</b><span>Tap the glowing tiles.</span></div>
+          <div class="tiles" id="tiles"></div>
+        </div>
+        <p id="puzzleHint">Find tile <b>7</b> ✨</p>
+        <button class="pill hidden" id="puzzleNext">You found it →</button>
+      </div>
+    </section>
+
+    <section class="page center" id="surprise">
+      <div class="section-box final-box">
+        <div class="tiny">ONE LAST SURPRISE ♥</div>
+        <h2>Okay… this part<br><em>is just for you.</em></h2>
+        <button class="gift" id="gift">
+          <span class="lid"></span><span class="bow bleft"></span><span class="bow bright"></span>
+          <span class="ribbon"></span><span class="box"></span>
+        </button>
+        <p>Tap the gift.</p>
+      </div>
+    </section>
+
+    <section class="page center" id="letter">
+      <div class="letter-card">
+        <div class="tiny">A LETTER JUST FOR YOU</div>
+        <h2>My dear <em id="name3">Rajani</em>,</h2>
+        <p id="letterText"></p>
+        <div class="sign">With love, <span>♥</span></div>
+        <button class="pill" id="again">Read it again ↻</button>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="footer-tip">Made with a little too much love ♥</div>
+<audio id="music" loop src="assets/music.mp3"></audio>
+<script src="script.js"></script>
+</body>
+</html>
